@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Trophy, Users, Calendar, Heart } from "lucide-react";
+import { Trophy, Users, Calendar, Heart, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -40,21 +40,24 @@ export function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-ducks-green via-ducks-purple to-ducks-green py-24 px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-ducks-green via-ducks-purple to-ducks-gold py-24 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative mx-auto max-w-7xl text-center">
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-8">
             <img
               src="/derbyshire-ducks.jpg"
               alt="Derbyshire Ducks Logo"
-              className="h-32 w-32 rounded-full object-cover border-4 border-white shadow-2xl"
+              className="h-40 w-40 object-contain drop-shadow-2xl"
             />
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Derbyshire Ducks
           </h1>
+          <div className="inline-block bg-ducks-gold text-black px-6 py-3 rounded-lg mb-6 font-bold text-xl shadow-lg">
+            🏆 2025 OFL Division 2 Champions! 🏆
+          </div>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Derby's Premier Flag American Football Team
+            Chesterfield's Premier Flag American Football Team
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -72,6 +75,60 @@ export function HomePage() {
             >
               <Link to="/schedule">View Schedule</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Championship Celebration Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-ducks-gold">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-ducks-green mb-6">
+              Champions in Our First Year!
+            </h2>
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto">
+              In our inaugural season competing in the Outlaw Flag League, the
+              Derbyshire Ducks claimed the Division 2 Championship title. This
+              historic achievement marks the beginning of our legacy!
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-video bg-gradient-to-br from-ducks-green to-ducks-purple flex items-center justify-center">
+                <span className="text-white text-lg font-semibold">
+                  Championship Game Photo
+                </span>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600">
+                  Add your championship celebration photo here
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-video bg-gradient-to-br from-ducks-purple to-ducks-gold flex items-center justify-center">
+                <span className="text-white text-lg font-semibold">
+                  Trophy Presentation
+                </span>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600">
+                  Add your trophy celebration photo here
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-video bg-gradient-to-br from-ducks-gold to-ducks-green flex items-center justify-center">
+                <span className="text-white text-lg font-semibold">
+                  Team Celebration
+                </span>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600">
+                  Add your team celebration photo here
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -116,7 +173,7 @@ export function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-ducks-green to-ducks-purple">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-ducks-green via-ducks-purple to-ducks-gold">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Join the Team?
@@ -128,10 +185,78 @@ export function HomePage() {
           <Button
             asChild
             size="lg"
-            className="bg-ducks-gold text-black hover:bg-ducks-gold/90"
+            className="bg-ducks-gold text-black hover:bg-ducks-gold/90 shadow-lg"
           >
             <Link to="/contact">Get in Touch</Link>
           </Button>
+        </div>
+      </section>
+
+      {/* Instagram Feed Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Follow Our Journey
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+              Stay up to date with our latest games, training sessions, and team
+              moments
+            </p>
+            <a
+              href="https://www.instagram.com/derbyshire_ducks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-ducks-purple hover:text-ducks-purple/80 font-semibold text-lg"
+            >
+              <Instagram className="h-6 w-6 mr-2" />
+              @derbyshire_ducks
+            </a>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+              <div
+                key={i}
+                className="aspect-square bg-gradient-to-br from-ducks-green via-ducks-purple to-ducks-gold rounded-lg flex items-center justify-center"
+              >
+                <span className="text-white text-sm font-semibold">
+                  Instagram Post {i}
+                </span>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <p className="text-sm text-gray-600 bg-white p-4 rounded-lg inline-block">
+              📸 To integrate your actual Instagram feed, you can use services
+              like{" "}
+              <a
+                href="https://embedsocial.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ducks-purple hover:underline"
+              >
+                EmbedSocial
+              </a>
+              ,{" "}
+              <a
+                href="https://www.instagram.com/developer/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ducks-purple hover:underline"
+              >
+                Instagram Basic Display API
+              </a>
+              , or{" "}
+              <a
+                href="https://elfsight.com/instagram-feed-instashow/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ducks-purple hover:underline"
+              >
+                Elfsight
+              </a>
+            </p>
+          </div>
         </div>
       </section>
     </div>

@@ -11,27 +11,32 @@ const positions = [
   {
     name: "Quarterback",
     description:
-      "Leads the offense, calls plays, and delivers accurate passes.",
-  },
-  {
-    name: "Wide Receiver",
-    description: "Runs routes, catches passes, and scores touchdowns.",
+      "The field general who orchestrates the offense. Responsible for reading the defense, calling audibles, and delivering precise passes to receivers. In flag football, quarterbacks must have quick decision-making skills and accuracy, as they typically have just 7 seconds to release the ball before the play is blown dead.",
   },
   {
     name: "Running Back",
-    description: "Versatile player who can catch passes and run with the ball.",
+    description:
+      "A dynamic, versatile player who lines up behind or beside the quarterback. Running backs are key receivers out of the backfield, running short routes and serving as safety valves for the QB. They excel at catching passes in traffic, making defenders miss, and gaining yards after the catch.",
   },
   {
-    name: "Center",
-    description: "Snaps the ball to start each play and can run routes.",
+    name: "Wide Receiver",
+    description:
+      "Speed merchants and route runners who create separation from defenders to catch passes. Wide receivers must master various route concepts, have reliable hands, and possess the agility to make cuts at full speed. They're the primary scoring threats in flag football, responsible for stretching the field vertically and horizontally.",
+  },
+  {
+    name: "Blitzer",
+    description:
+      "The defensive disruptor who rushes the quarterback after a mandatory count (typically 7 seconds). Blitzers use speed and technique to pressure the QB, force hurried throws, and create turnovers. Only one rusher is allowed per play in most flag football rules, making this position crucial for defensive success.",
   },
   {
     name: "Defensive Back",
-    description: "Covers receivers and attempts to intercept passes.",
+    description:
+      "Defensive playmakers who cover receivers and protect against the pass. DBs must have excellent footwork, read the quarterback's eyes, and react quickly to break on the ball. They're responsible for pulling flags to stop the offense and can change the game with interceptions and deflections.",
   },
   {
-    name: "Rusher",
-    description: "Applies pressure on the quarterback and disrupts plays.",
+    name: "Linebacker",
+    description:
+      "The defensive quarterbacks who read plays, communicate coverage assignments, and patrol the middle of the field. Linebackers must balance defending against short routes while preventing receivers from getting deep. They're often the most versatile defenders, capable of covering any offensive position.",
   },
 ];
 
@@ -49,8 +54,25 @@ export function TeamPage() {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our team is made up of dedicated athletes who share a passion for
-            flag football and representing Derby with pride.
+            flag football and representing Derbyshire and Chesterfield with
+            pride.
           </p>
+        </div>
+
+        {/* Team Photo Placeholder */}
+        <div className="mb-16">
+          <div className="relative rounded-xl overflow-hidden shadow-2xl">
+            <div className="aspect-[21/9] bg-gradient-to-r from-ducks-green via-ducks-purple to-ducks-gold flex items-center justify-center">
+              <span className="text-white text-2xl font-bold">
+                Team Roster Photo Placeholder
+              </span>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+              <p className="text-white text-lg">
+                Full team photo - Show off the championship squad!
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Team Description */}
@@ -85,7 +107,7 @@ export function TeamPage() {
             {positions.map((position) => (
               <Card
                 key={position.name}
-                className="hover:shadow-lg transition-shadow"
+                className="hover:shadow-lg transition-shadow border-l-4 border-l-ducks-purple"
               >
                 <CardHeader>
                   <CardTitle className="text-xl text-ducks-purple">
@@ -99,6 +121,39 @@ export function TeamPage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+
+        {/* Action Photos Grid */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+            Game Day Action
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="relative rounded-xl overflow-hidden shadow-lg">
+              <div className="aspect-video bg-gradient-to-br from-ducks-green to-ducks-purple/80 flex items-center justify-center">
+                <span className="text-white text-xl font-bold">
+                  Offense in Action
+                </span>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                <p className="text-white text-sm">
+                  Add action photos of your offense making plays!
+                </p>
+              </div>
+            </div>
+            <div className="relative rounded-xl overflow-hidden shadow-lg">
+              <div className="aspect-video bg-gradient-to-br from-ducks-purple to-ducks-gold/80 flex items-center justify-center">
+                <span className="text-white text-xl font-bold">
+                  Defense Dominating
+                </span>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                <p className="text-white text-sm">
+                  Showcase your defense making stops and creating turnovers!
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 

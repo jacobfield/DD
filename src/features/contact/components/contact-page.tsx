@@ -65,11 +65,11 @@ export function ContactPage() {
   };
 
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8">
+    <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-ducks-green/5">
       <div className="mx-auto max-w-7xl">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-ducks-green to-ducks-purple mb-6">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-ducks-green to-ducks-purple mb-6 shadow-lg">
             <Mail className="h-10 w-10 text-white" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -84,9 +84,9 @@ export function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-2xl">Send us a Message</CardTitle>
+            <Card className="border-2 border-ducks-gold shadow-xl">
+              <CardHeader className="bg-gradient-to-r from-ducks-green/10 to-ducks-purple/10">
+                <CardTitle className="text-2xl text-ducks-purple">Send us a Message</CardTitle>
                 <CardDescription>
                   Fill out the form below and we'll get back to you as soon as
                   possible
@@ -146,8 +146,8 @@ export function ContactPage() {
                   </div>
 
                   {submitStatus === "success" && (
-                    <div className="p-4 rounded-md bg-green-50 border border-green-200">
-                      <p className="text-sm text-green-800">
+                    <div className="p-4 rounded-md bg-ducks-green/10 border-2 border-ducks-green">
+                      <p className="text-sm text-ducks-green font-semibold">
                         Your email client should open with your message. Send
                         the email to complete your submission!
                       </p>
@@ -166,7 +166,7 @@ export function ContactPage() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full"
+                    className="w-full bg-ducks-green hover:bg-ducks-green/90"
                     size="lg"
                   >
                     <Send className="mr-2 h-4 w-4" />
@@ -179,14 +179,14 @@ export function ContactPage() {
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Email Us</CardTitle>
+            <Card className="border-2 border-ducks-purple/30 hover:border-ducks-purple transition-colors">
+              <CardHeader className="bg-ducks-purple/5">
+                <CardTitle className="text-ducks-purple">Email Us</CardTitle>
               </CardHeader>
               <CardContent>
                 <a
                   href="mailto:derbyshireducks@gmail.com"
-                  className="flex items-center text-ducks-purple hover:text-ducks-purple/80 transition-colors"
+                  className="flex items-center text-ducks-purple hover:text-ducks-green transition-colors font-medium"
                 >
                   <Mail className="h-5 w-5 mr-2" />
                   derbyshireducks@gmail.com
@@ -194,16 +194,16 @@ export function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Follow Us</CardTitle>
+            <Card className="border-2 border-ducks-purple/30 hover:border-ducks-purple transition-colors">
+              <CardHeader className="bg-ducks-purple/5">
+                <CardTitle className="text-ducks-purple">Follow Us</CardTitle>
               </CardHeader>
               <CardContent>
                 <a
                   href="https://www.instagram.com/derbyshire_ducks"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center text-ducks-purple hover:text-ducks-purple/80 transition-colors"
+                  className="flex items-center text-ducks-purple hover:text-ducks-green transition-colors font-medium"
                 >
                   <Instagram className="h-5 w-5 mr-2" />
                   @derbyshire_ducks
@@ -211,9 +211,9 @@ export function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-ducks-green/5 to-ducks-purple/5">
-              <CardHeader>
-                <CardTitle>Join the Team</CardTitle>
+            <Card className="bg-gradient-to-br from-ducks-green/10 to-ducks-purple/10 border-2 border-ducks-gold">
+              <CardHeader className="bg-gradient-to-r from-ducks-green/20 to-ducks-purple/20">
+                <CardTitle className="text-ducks-green">Join the Team</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">

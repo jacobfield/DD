@@ -125,9 +125,24 @@ export function SchedulePage() {
             Schedule & Results
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Keep up with all our fixtures and see how the Ducks are performing
-            this season
+            Keep up with the Ducks' fixtures and follow our championship journey
           </p>
+        </div>
+
+        {/* Championship Banner */}
+        <div className="mb-16">
+          <div className="relative rounded-xl overflow-hidden shadow-2xl">
+            <div className="aspect-[21/9] bg-gradient-to-r from-ducks-gold via-ducks-green to-ducks-purple flex items-center justify-center">
+              <div className="text-center">
+                <span className="text-white text-3xl md:text-5xl font-bold block mb-2">
+                  🏆 OFL Division 2 Champions 🏆
+                </span>
+                <span className="text-white/90 text-lg md:text-xl">
+                  2024 Season - Undefeated Run
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Upcoming Games */}
@@ -136,40 +151,72 @@ export function SchedulePage() {
             Upcoming Fixtures
           </h2>
           {upcomingGames.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {upcomingGames.map((game, index) => (
                 <GameCard key={index} game={game} />
               ))}
             </div>
           ) : (
-            <Card>
+            <Card className="border-2 border-ducks-gold">
               <CardHeader>
-                <CardTitle>No Upcoming Games</CardTitle>
+                <CardTitle>Season Complete</CardTitle>
                 <CardDescription>
-                  Check back soon for our next fixtures!
+                  Check back for next season's fixtures! Follow us on Instagram
+                  @derbyshire_ducks for updates.
                 </CardDescription>
               </CardHeader>
             </Card>
           )}
         </div>
 
-        {/* Past Games */}
+        {/* Game Day Photos */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+            Game Day Highlights
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="relative rounded-xl overflow-hidden shadow-lg">
+              <div className="aspect-square bg-gradient-to-br from-ducks-green to-ducks-green/60 flex items-center justify-center">
+                <span className="text-white text-xl font-bold text-center px-4">
+                  Game Action Photo
+                </span>
+              </div>
+            </div>
+            <div className="relative rounded-xl overflow-hidden shadow-lg">
+              <div className="aspect-square bg-gradient-to-br from-ducks-purple to-ducks-purple/60 flex items-center justify-center">
+                <span className="text-white text-xl font-bold text-center px-4">
+                  Celebration Photo
+                </span>
+              </div>
+            </div>
+            <div className="relative rounded-xl overflow-hidden shadow-lg">
+              <div className="aspect-square bg-gradient-to-br from-ducks-gold to-ducks-gold/60 flex items-center justify-center">
+                <span className="text-white text-xl font-bold text-center px-4">
+                  Trophy Photo
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Past Games - Simplified */}
         <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
             Recent Results
           </h2>
           {pastGames.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {pastGames.map((game, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {pastGames.slice(0, 4).map((game, index) => (
                 <GameCard key={index} game={game} />
               ))}
             </div>
           ) : (
             <Card>
               <CardHeader>
-                <CardTitle>No Past Games</CardTitle>
+                <CardTitle>Championship Season Complete</CardTitle>
                 <CardDescription>
-                  Our season is just getting started!
+                  View our championship-winning season highlights on Instagram
+                  @derbyshire_ducks
                 </CardDescription>
               </CardHeader>
             </Card>

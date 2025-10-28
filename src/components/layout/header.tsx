@@ -15,7 +15,7 @@ export function Header() {
   const location = useLocation();
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white shadow-md sticky top-0 z-50 border-b-4 border-ducks-gold">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between items-center">
           <div className="flex items-center">
@@ -40,7 +40,7 @@ export function Header() {
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-ducks-purple",
                   location.pathname === item.href
-                    ? "text-ducks-purple"
+                    ? "text-ducks-purple font-bold"
                     : "text-gray-700"
                 )}
               >
@@ -50,17 +50,17 @@ export function Header() {
           </div>
 
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon" asChild>
+            <Button variant="ghost" size="icon" asChild className="hover:bg-ducks-purple/10">
               <a
                 href="https://www.instagram.com/derbyshire_ducks"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
               >
-                <Instagram className="h-5 w-5" />
+                <Instagram className="h-5 w-5 text-ducks-purple" />
               </a>
             </Button>
-            <Button asChild>
+            <Button asChild className="bg-ducks-green hover:bg-ducks-green/90 text-white">
               <Link to="/contact">Join Us</Link>
             </Button>
           </div>
