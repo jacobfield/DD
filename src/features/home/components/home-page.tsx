@@ -80,20 +80,20 @@ export function HomePage() {
       </section>
 
       {/* Championship Celebration Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-ducks-gold">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-ducks-green/5 to-ducks-purple/10">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-ducks-green mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-ducks-green via-ducks-purple to-ducks-gold bg-clip-text text-transparent mb-6">
               Champions in Our First Year!
             </h2>
-            <p className="text-xl text-gray-800 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               In our inaugural season competing in the Outlaw Flag League, the
               Derbyshire Ducks claimed the Division 2 Championship title. This
               historic achievement marks the beginning of our legacy!
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg border-2 border-ducks-green/20 hover:border-ducks-green transition-all">
               <div className="aspect-video bg-gradient-to-br from-ducks-green to-ducks-purple flex items-center justify-center">
                 <span className="text-white text-lg font-semibold">
                   Championship Game Photo
@@ -105,7 +105,7 @@ export function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg border-2 border-ducks-purple/20 hover:border-ducks-purple transition-all">
               <div className="aspect-video bg-gradient-to-br from-ducks-purple to-ducks-gold flex items-center justify-center">
                 <span className="text-white text-lg font-semibold">
                   Trophy Presentation
@@ -117,7 +117,7 @@ export function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg border-2 border-ducks-gold/20 hover:border-ducks-gold transition-all">
               <div className="aspect-video bg-gradient-to-br from-ducks-gold to-ducks-green flex items-center justify-center">
                 <span className="text-white text-lg font-semibold">
                   Team Celebration

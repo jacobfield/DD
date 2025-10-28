@@ -50,12 +50,12 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       animation: {
-        scroll: "scroll 30s linear infinite",
+        scroll: "scroll 60s linear infinite",
       },
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
     },
