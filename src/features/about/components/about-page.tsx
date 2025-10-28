@@ -56,7 +56,9 @@ export function AboutPage() {
         <div className="mb-16">
           <Card className="border-2 border-ducks-gold shadow-lg">
             <CardHeader className="bg-gradient-to-r from-ducks-green/10 to-ducks-purple/10">
-              <CardTitle className="text-2xl text-ducks-purple">Our Story</CardTitle>
+              <CardTitle className="text-2xl text-ducks-purple">
+                Our Story
+              </CardTitle>
             </CardHeader>
             <CardContent className="prose prose-lg max-w-none">
               <p className="text-gray-600 mb-4">
@@ -124,7 +126,9 @@ export function AboutPage() {
                     <div className="w-16 h-16 rounded-full bg-gradient-to-br from-ducks-green to-ducks-purple flex items-center justify-center mx-auto mb-4 shadow-lg">
                       <Icon className="h-8 w-8 text-white" />
                     </div>
-                    <CardTitle className="text-2xl text-ducks-purple">{value.title}</CardTitle>
+                    <CardTitle className="text-2xl text-ducks-purple">
+                      {value.title}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-gray-600">
@@ -141,7 +145,9 @@ export function AboutPage() {
         <div>
           <Card className="bg-gradient-to-br from-ducks-purple/10 to-ducks-green/10 border-2 border-ducks-purple/30">
             <CardHeader className="bg-gradient-to-r from-ducks-green/20 to-ducks-purple/20">
-              <CardTitle className="text-2xl text-ducks-green">What is Flag Football?</CardTitle>
+              <CardTitle className="text-2xl text-ducks-green">
+                What is Flag Football?
+              </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-600">

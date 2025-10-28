@@ -13,13 +13,13 @@ export function HashtagBar() {
   ];
 
   return (
-    <div className="bg-ducks-purple border-y-2 border-ducks-gold overflow-hidden py-3 shadow-md">
+    <div className="bg-ducks-purple border-y-2 border-ducks-gold overflow-hidden py-4 shadow-md relative">
       <div className="relative flex whitespace-nowrap">
         <div className="flex animate-scroll">
           {hashtags.map((tag, index) => (
             <span
               key={index}
-              className="mx-8 text-white font-bold text-lg inline-block"
+              className="mx-8 text-white font-bold text-xl inline-block font-display tracking-wider hover:text-ducks-gold transition-colors"
             >
               {tag}
             </span>
@@ -30,7 +30,7 @@ export function HashtagBar() {
           {hashtags.map((tag, index) => (
             <span
               key={`duplicate-${index}`}
-              className="mx-8 text-white font-bold text-lg inline-block"
+              className="mx-8 text-white font-bold text-xl inline-block font-display tracking-wider hover:text-ducks-gold transition-colors"
             >
               {tag}
             </span>

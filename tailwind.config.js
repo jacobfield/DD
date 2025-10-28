@@ -4,6 +4,16 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sports: [
+          "Racing Sans One",
+          "Teko",
+          "Staatliches",
+          "system-ui",
+          "sans-serif",
+        ],
+        display: ["Teko", "system-ui", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

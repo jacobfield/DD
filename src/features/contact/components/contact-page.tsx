@@ -86,7 +86,9 @@ export function ContactPage() {
           <div className="lg:col-span-2">
             <Card className="border-2 border-ducks-gold shadow-xl">
               <CardHeader className="bg-gradient-to-r from-ducks-green/10 to-ducks-purple/10">
-                <CardTitle className="text-2xl text-ducks-purple">Send us a Message</CardTitle>
+                <CardTitle className="text-2xl text-ducks-purple">
+                  Send us a Message
+                </CardTitle>
                 <CardDescription>
                   Fill out the form below and we'll get back to you as soon as
                   possible
@@ -213,7 +215,9 @@ export function ContactPage() {
 
             <Card className="bg-gradient-to-br from-ducks-green/10 to-ducks-purple/10 border-2 border-ducks-gold">
               <CardHeader className="bg-gradient-to-r from-ducks-green/20 to-ducks-purple/20">
-                <CardTitle className="text-ducks-green">Join the Team</CardTitle>
+                <CardTitle className="text-ducks-green">
+                  Join the Team
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">

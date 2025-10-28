@@ -5,7 +5,7 @@ const navigation = {
   main: [
     { name: "About", href: "/about" },
     { name: "Team", href: "/team" },
-    { name: "Schedule", href: "/schedule" },
+    // { name: "Schedule", href: "/schedule" },
     { name: "Contact", href: "/contact" },
   ],
 };
@@ -22,20 +22,20 @@ export function Footer() {
               <img
                 src="/derbyshire-ducks.jpg"
                 alt="Derbyshire Ducks Logo"
-                className="h-12 w-12 rounded-full object-cover"
+                className="h-14 w-14 rounded-full object-cover ring-2 ring-white"
               />
-              <h3 className="text-lg font-semibold text-white">
-                Derbyshire Ducks
+              <h3 className="text-2xl font-bold text-white font-sports tracking-wider">
+                DERBYSHIRE DUCKS
               </h3>
             </div>
-            <p className="text-sm text-white/90">
+            <p className="text-sm text-white/90 font-display">
               Chesterfield's premier flag American football team. Passionate
               players, competitive spirit, and community pride.
             </p>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">
+            <h3 className="text-sm font-semibold text-white mb-4 font-display uppercase tracking-wider">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -43,7 +43,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     to={item.href}
-                    className="text-sm text-white/90 hover:text-ducks-gold transition-colors font-medium"
+                    className="text-sm text-white/90 hover:text-ducks-gold transition-colors font-medium font-display uppercase tracking-wide hover:translate-x-2 inline-block transform transition-transform"
                   >
                     {item.name}
                   </Link>
@@ -53,7 +53,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">
+            <h3 className="text-sm font-semibold text-white mb-4 font-display uppercase tracking-wider">
               Connect
             </h3>
             <div className="space-y-3">
@@ -61,16 +61,16 @@ export function Footer() {
                 href="https://www.instagram.com/derbyshire_ducks"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-sm text-white/90 hover:text-ducks-gold transition-colors font-medium"
+                className="flex items-center text-sm text-white/90 hover:text-ducks-gold transition-all font-medium font-display group"
               >
-                <Instagram className="h-4 w-4 mr-2" />
+                <Instagram className="h-5 w-5 mr-2 group-hover:scale-125 transition-transform" />
                 @derbyshire_ducks
               </a>
               <a
                 href="mailto:derbyshireducks@gmail.com"
-                className="flex items-center text-sm text-white/90 hover:text-ducks-gold transition-colors font-medium"
+                className="flex items-center text-sm text-white/90 hover:text-ducks-gold transition-all font-medium font-display group"
               >
-                <Mail className="h-4 w-4 mr-2" />
+                <Mail className="h-5 w-5 mr-2 group-hover:scale-125 transition-transform" />
                 derbyshireducks@gmail.com
               </a>
             </div>
@@ -78,8 +78,8 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/20">
-          <p className="text-center text-sm text-white/80">
-            © {currentYear} Derbyshire Ducks. All rights reserved.
+          <p className="text-center text-sm text-white/80 font-display">
+            © {currentYear} Derbyshire Ducks. All rights reserved. 🦆🏆
           </p>
         </div>
       </div>

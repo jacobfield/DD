@@ -40,30 +40,33 @@ export function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-ducks-green via-ducks-purple to-ducks-gold py-24 px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-black/20" />
+      <section className="relative bg-gradient-to-br from-ducks-green via-ducks-purple to-ducks-gold py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-black/30" />
         <div className="relative mx-auto max-w-7xl text-center">
           <div className="flex justify-center mb-8">
-            <img
-              src="/derbyshire-ducks.jpg"
-              alt="Derbyshire Ducks Logo"
-              className="h-40 w-40 object-contain drop-shadow-2xl"
-            />
+            <div className="relative group">
+              <div className="absolute inset-0 bg-ducks-gold rounded-full blur-xl group-hover:blur-2xl transition-all" />
+              <img
+                src="/derbyshire-ducks.jpg"
+                alt="Derbyshire Ducks Logo"
+                className="relative h-48 w-48 object-contain drop-shadow-2xl transform group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Derbyshire Ducks
+          <h1 className="text-6xl md:text-8xl font-bold font-sports text-white mb-6 tracking-wider transform hover:scale-105 transition-transform">
+            DERBYSHIRE DUCKS
           </h1>
-          <div className="inline-block bg-ducks-gold text-black px-6 py-3 rounded-lg mb-6 font-bold text-xl shadow-lg">
-            🏆 2025 OFL Division 2 Champions! 🏆
+          <div className="inline-block bg-ducks-gold text-black px-8 py-4 rounded-lg mb-8 font-bold text-2xl shadow-2xl transform hover:scale-105 transition-all">
+            🏆 2025 OFL DIV 2 CHAMPIONS! 🏆
           </div>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Chesterfield's Premier Flag American Football Team
+          <p className="text-2xl md:text-3xl text-white/95 mb-10 max-w-3xl mx-auto font-display font-semibold">
+            Chesterfield's Premier Flag Football Team
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               asChild
               size="lg"
-              className="bg-ducks-gold text-black hover:bg-ducks-gold/90"
+              className="bg-ducks-gold text-black hover:bg-ducks-gold/90 font-display font-bold text-lg uppercase tracking-wide shadow-2xl hover:shadow-ducks-gold/50 transform hover:scale-110 transition-all"
             >
               <Link to="/contact">Join the Flock</Link>
             </Button>
@@ -71,60 +74,68 @@ export function HomePage() {
               asChild
               size="lg"
               variant="outline"
-              className="bg-white/10 text-white border-white hover:bg-white/20"
+              className="bg-white/10 text-white border-2 border-white hover:bg-white hover:text-ducks-purple font-display font-bold text-lg uppercase tracking-wide backdrop-blur-sm transform hover:scale-110 transition-all"
             >
-              <Link to="/schedule">View Schedule</Link>
+              <Link to="/about">Our Story</Link>
             </Button>
           </div>
         </div>
       </section>
 
       {/* Championship Celebration Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-ducks-green/5 to-ducks-purple/10">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-ducks-green/5 to-ducks-purple/10 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-ducks-green via-ducks-purple to-ducks-gold" />
         <div className="mx-auto max-w-7xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-ducks-green via-ducks-purple to-ducks-gold bg-clip-text text-transparent mb-6">
-              Champions in Our First Year!
+          <div className="text-center mb-16">
+            <div className="inline-block mb-6">
+              <span className="text-6xl inline-block">🏆</span>
+            </div>
+            <h2 className="text-5xl md:text-7xl font-bold font-sports bg-gradient-to-r from-ducks-green via-ducks-purple to-ducks-gold bg-clip-text text-transparent mb-8 tracking-wider">
+              CHAMPIONS IN OUR FIRST YEAR!
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto font-display">
               In our inaugural season competing in the Outlaw Flag League, the
               Derbyshire Ducks claimed the Division 2 Championship title. This
               historic achievement marks the beginning of our legacy!
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg border-2 border-ducks-green/20 hover:border-ducks-green transition-all">
-              <div className="aspect-video bg-gradient-to-br from-ducks-green to-ducks-purple flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-2xl border-2 border-ducks-green/20 hover:border-ducks-green transform hover:scale-105 hover:-rotate-1 transition-all duration-300 group">
+              <div className="aspect-video bg-gradient-to-br from-ducks-green to-ducks-purple flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all" />
+                <span className="relative text-white text-xl font-bold font-display z-10">
                   Championship Game Photo
                 </span>
               </div>
-              <div className="p-4">
-                <p className="text-sm text-gray-600">
+              <div className="p-6">
+                <p className="text-sm text-gray-600 font-medium">
                   Add your championship celebration photo here
                 </p>
               </div>
             </div>
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg border-2 border-ducks-purple/20 hover:border-ducks-purple transition-all">
-              <div className="aspect-video bg-gradient-to-br from-ducks-purple to-ducks-gold flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-2xl border-2 border-ducks-purple/20 hover:border-ducks-purple transform hover:scale-105 transition-all duration-300 group">
+              <div className="aspect-video bg-gradient-to-br from-ducks-purple to-ducks-gold flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all" />
+                <span className="relative text-white text-xl font-bold font-display z-10">
                   Trophy Presentation
                 </span>
               </div>
-              <div className="p-4">
-                <p className="text-sm text-gray-600">
+              <div className="p-6">
+                <p className="text-sm text-gray-600 font-medium">
                   Add your trophy celebration photo here
                 </p>
               </div>
             </div>
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg border-2 border-ducks-gold/20 hover:border-ducks-gold transition-all">
-              <div className="aspect-video bg-gradient-to-br from-ducks-gold to-ducks-green flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-2xl border-2 border-ducks-gold/20 hover:border-ducks-gold transform hover:scale-105 hover:rotate-1 transition-all duration-300 group">
+              <div className="aspect-video bg-gradient-to-br from-ducks-gold to-ducks-green flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all" />
+                <span className="relative text-white text-xl font-bold font-display z-10">
                   Team Celebration
                 </span>
               </div>
-              <div className="p-4">
-                <p className="text-sm text-gray-600">
+              <div className="p-6">
+                <p className="text-sm text-gray-600 font-medium">
                   Add your team celebration photo here
                 </p>
               </div>
@@ -134,34 +145,42 @@ export function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What We're About
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 relative overflow-hidden">
+        {/* Animated background grid */}
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-ducks-purple/10 to-gray-900" />
+        <div className="absolute inset-0 opacity-10">
+          <div className="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        </div>
+        <div className="relative mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-bold font-sports text-white mb-6 tracking-wider">
+              WHAT WE'RE ABOUT
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto font-display">
               More than just a team, we're a community united by our love for
               flag football
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
                 <Card
                   key={feature.title}
-                  className="hover:shadow-lg transition-shadow"
+                  className="hover:shadow-2xl hover:shadow-ducks-purple/20 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gray-800/50 backdrop-blur-sm border-2 border-ducks-purple/20 hover:border-ducks-purple group"
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <CardHeader>
-                    <div className="w-12 h-12 rounded-lg bg-ducks-purple/10 flex items-center justify-center mb-4">
-                      <Icon className="h-6 w-6 text-ducks-purple" />
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-ducks-green to-ducks-purple flex items-center justify-center mb-4 transform group-hover:rotate-12 transition-transform shadow-lg">
+                      <Icon className="h-8 w-8 text-white" />
                     </div>
-                    <CardTitle className="text-xl">{feature.title}</CardTitle>
+                    <CardTitle className="text-2xl font-display text-white group-hover:text-ducks-gold transition-colors">
+                      {feature.title}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-gray-600">
+                    <CardDescription className="text-gray-300">
                       {feature.description}
                     </CardDescription>
                   </CardContent>
@@ -173,19 +192,20 @@ export function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-ducks-green via-ducks-purple to-ducks-gold">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Join the Team?
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-ducks-green via-ducks-purple to-ducks-gold relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="relative mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl md:text-6xl font-bold font-sports text-white mb-8 tracking-wider">
+            READY TO JOIN THE TEAM?
           </h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl md:text-2xl text-white/95 mb-10 font-display font-semibold">
             Whether you're an experienced player or new to flag football, we
             welcome all skill levels!
           </p>
           <Button
             asChild
             size="lg"
-            className="bg-ducks-gold text-black hover:bg-ducks-gold/90 shadow-lg"
+            className="bg-white text-ducks-purple hover:bg-gray-100 shadow-2xl font-display font-bold text-xl uppercase tracking-wide px-12 py-8 transform hover:scale-110 transition-all"
           >
             <Link to="/contact">Get in Touch</Link>
           </Button>
